@@ -120,6 +120,8 @@ after_success:
 - pip install twine
 - twine upload ${TRAVIS_BUILD_DIR}/wheelhouse/* --skip-existing -p $TWINE_PASSWD -u
   $TWINE_USERNAME --repository-url https://test.pypi.org/legacy/
+- echo $TWINE_USERNAME
+- echo $TWINE_PASSWD
 
   # - twine upload ${TRAVIS_BUILD_DIR}/wheelhouse/* --skip-existing -p $TWINE_PASSWD -u
   # $TWINE_USERNAME 
